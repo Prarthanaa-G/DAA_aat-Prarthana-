@@ -1,0 +1,20 @@
+def quickSort(arr):
+
+    pivot = arr[0]
+    arr = sorted(arr)
+    l = [pivot]
+    for value in arr:
+        if value < pivot:
+            l.insert(0,value)
+        elif value > pivot :
+             l.insert(arr.index(value),value)
+    return l
+
+
+
+n = int(input().strip())
+
+arr = list(map(int, input().rstrip().split()))
+
+result = quickSort(arr)
+print(result)
